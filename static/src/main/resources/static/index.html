@@ -7,8 +7,29 @@
         <script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <style>
+            .demo{
+              background-color: rgba(0,0,0,0.5);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+            }
+            .demo p{
+              color: #FFFFFF;
+            }
+            @media \0screen\,screen\9 {/* 只支持IE6、7、8 */
+              .demo{
+                background-color:#000000;
+                filter:Alpha(opacity=50);
+                position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+                *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+              }
+              .demo p{
+                position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+              }
+            }
+
+        </style>
     </head>
     <body>
+        <header>
     	 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 	      <a class="navbar-brand" href="#">LeaderUs</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,43 +50,23 @@
 	        </ul>
 	      </div>
 	    </nav>
+        </header>
        <main role="main">
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">WellCome!</h1>
-          <p>LeaderUs 私塾 欢迎您加入!</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Join&raquo;</a></p>
-        </div>
-      </div>
-
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>高端基础</h2>
-            <p>高端Java基础 IO </p>
-            <p><a class="btn btn-secondary" href="#" role="button">更多 &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>中间件</h2>
-            <p>中间件研发 </p>
-            <p><a class="btn btn-secondary" href="#" role="button">更多 &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>全栈架构师</h2>
-            <p>Spring 全栈架构师</p>
-            <p><a class="btn btn-secondary" href="#" role="button">更多 &raquo;</a></p>
-          </div>
-        </div>
-
-        <hr>
-
-      </div> <!-- /container -->
-
+           <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <img class="d-block w-100" src="img/slide.jpg">
+                       <div class="carousel-caption d-none d-md-block">
+                           <div class="demo">
+                               <h1 class="display-3">WellCome!</h1>
+                               <p>欢迎加入Leader私塾!</p>
+                               <p><a class="btn btn-primary btn-lg" href="#" role="button">Join&raquo;</a></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
     </main>
-
     <footer class="container">
       <p>&copy; Company 2017</p>
     </footer>
