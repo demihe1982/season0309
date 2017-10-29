@@ -8,14 +8,13 @@ $(function(){
                     contentType: false,
                     processData: false,
                     success: function (data) {
-                        alert(data.fileSize);
+                        if(data.code == 0){
+                           bootbox.alert("作业提交成功!");
+                        }else{
+                            bootbox.alert(data.error);
+                        }
                     },
                     error: function () {}
                 });
-
-          /* var data = $('form[name="ldhomework-upload"] button').serialize();
-           $.post("/ldhomework/upload",data,function(data){
-                alert(data);
-           });*/
     });
 });
