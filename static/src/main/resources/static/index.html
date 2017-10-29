@@ -4,15 +4,70 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
+    	 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	      <a class="navbar-brand" href="#">LeaderUs</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	
+	      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item active">
+	            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="/ldhomework-upload.html">上传作业</a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="/ldhomework-fb-list.html">批改作业</a>
+	          </li>
+	        </ul>
+	      </div>
+	    </nav>
+       <main role="main">
 
-            <div class="alert alert-primary" role="alert">
-                This is a primary alert-check it out!
-            </div>
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">WellCome!</h1>
+          <p>LeaderUs 私塾 欢迎您加入!</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Join&raquo;</a></p>
         </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>高端基础</h2>
+            <p>高端Java基础 IO </p>
+            <p><a class="btn btn-secondary" href="#" role="button">更多 &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>中间件</h2>
+            <p>中间件研发 </p>
+            <p><a class="btn btn-secondary" href="#" role="button">更多 &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>全栈架构师</h2>
+            <p>Spring 全栈架构师</p>
+            <p><a class="btn btn-secondary" href="#" role="button">更多 &raquo;</a></p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; Company 2017</p>
+    </footer>
     </body>
 </html>

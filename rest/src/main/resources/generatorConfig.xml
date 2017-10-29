@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE generatorConfiguration
+                PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+                "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="context1" targetRuntime="MyBatis3Simple">
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+            <property name="javaFileEncoding" value="UTF-8"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ldcollege"
+                        userId="root" password="root">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="edu.ldcollege.domain"
+                            targetProject="MAVEN">
+        </javaModelGenerator>
+        <javaClientGenerator targetPackage="edu.ldcollege.domain"
+                            targetProject="MAVEN" type="ANNOTATEDMAPPER">
+        </javaClientGenerator>
+        <table tableName="ld_home_work"/>
+        <table tableName="ld_home_work_fb"/>
+        <table tableName="ld_student"/>
+        <table tableName="ld_class"/>
+        <table tableName="ld_lesson"/>
+
+
+    </context>
+
+</generatorConfiguration>
